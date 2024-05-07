@@ -80,6 +80,7 @@ class SignupScreen extends StatelessWidget {
                       }),
                   const Gap(40),
                   ElevatedButton(
+                     style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
                       onPressed: () async {
                         if (_formkey.currentState!.validate()) {
                           AuthService().signUp(
@@ -96,7 +97,7 @@ class SignupScreen extends StatelessWidget {
                               ));
                         }
                       },
-                      child: const Text('Sign Up'))
+                      child: const Text('SignUp',style: TextStyle(color: Colors.white),))
                 ],
               ),
             ),

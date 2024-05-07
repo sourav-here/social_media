@@ -48,7 +48,6 @@ class ProfilePage extends StatelessWidget {
             return Scaffold(
               backgroundColor: Colors.white,
               appBar: AppBar(
-                iconTheme: const IconThemeData(color: Colors.black),
                 elevation: 0,
                 backgroundColor: Colors.white,
                 title: const Text(
@@ -64,12 +63,12 @@ class ProfilePage extends StatelessWidget {
                     width: 400,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: const Color.fromARGB(255, 101, 100, 100),
+                      color: const Color.fromARGB(31, 72, 72, 72),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        const SizedBox(height: 60),
+                        const SizedBox(height: 100),
                         SizedBox(
                           height: 90,
                           child: Center(

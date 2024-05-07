@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print, use_build_context_synchronously
 
+import 'dart:convert';
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -73,6 +74,29 @@ class AuthService {
       }
     } catch (e) {
       throw Exception('Something went wrong: $e');
+    }
+  }
+
+  Future<void> changePassword(BuildContext context, String password) async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    final token = pref.getString('Token');
+    final data = {'password': password};
+    try {
+      final response = await dio.post(
+          'http://social-media-5ukj.onrender.com/auth/changepassword',
+          data: jsonEncode(data),
+          options: Options(headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer $token'
+          }));
+
+      if (response.statusCode == 200) {
+        log('password changed');
+      } else {
+        print('password change failed${response.statusCode}');
+      }
+    } catch (e) {
+      throw Exception(e);
     }
   }
 }

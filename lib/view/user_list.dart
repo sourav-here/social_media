@@ -46,7 +46,7 @@ class UserList extends StatelessWidget {
                         child: SizedBox(
                           height: 80,
                           child: Card(
-                            color: const Color.fromARGB(179, 50, 49, 49),
+                            color: const Color.fromARGB(31, 72, 72, 72),
                             child: Align(
                               alignment: Alignment.center,
                               child: ListTile(
@@ -55,6 +55,9 @@ class UserList extends StatelessWidget {
                                   children: [
                                     IconButton(
                                         onPressed: () {
+                                          // provider.deleteContact(
+                                          //     data.id.toString());
+                                          UserService.deleteUser(data.id!);
                                           provider.deleteContact(
                                               data.id.toString());
                                         },

@@ -40,7 +40,7 @@ class LoginPage extends StatelessWidget {
                   TextFormField(
                     controller: emailController,
                     decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.email),
+                        prefixIcon: Icon(Icons.email),
                         hintText: 'Enter a Email',
                         border: OutlineInputBorder()),
                     validator: (value) {
@@ -55,7 +55,7 @@ class LoginPage extends StatelessWidget {
                   TextFormField(
                     controller: passwordController,
                     decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.lock),
+                        prefixIcon: Icon(Icons.lock),
                         hintText: 'Enter a password',
                         border: OutlineInputBorder()),
                     validator: (value) {
@@ -68,6 +68,8 @@ class LoginPage extends StatelessWidget {
                   ),
                   const Gap(40),
                   ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black),
                       onPressed: () async {
                         if (_formkey.currentState!.validate()) {
                           final status = await AuthService().login(
@@ -85,18 +87,26 @@ class LoginPage extends StatelessWidget {
                           }
                         }
                       },
-                      child: const Text('Login')),
+                      child: const Text(
+                        'Login',
+                        style: TextStyle(color: Colors.white),
+                      )),
                   const SizedBox(
                     height: 40,
                   ),
                   ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black),
                       onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => SignupScreen()));
                       },
-                      child: const Text('Sign Up'))
+                      child: const Text(
+                        'SignUp',
+                        style: TextStyle(color: Colors.white),
+                      ))
                 ],
               ),
             ),
