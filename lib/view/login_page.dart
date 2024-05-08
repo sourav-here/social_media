@@ -41,11 +41,11 @@ class LoginPage extends StatelessWidget {
                     controller: emailController,
                     decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.email),
-                        hintText: 'Enter a Email',
+                        hintText: 'Enter Email',
                         border: OutlineInputBorder()),
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return 'Enter a valid Email';
+                        return 'Enter correct Email';
                       } else {
                         return null;
                       }
@@ -56,11 +56,11 @@ class LoginPage extends StatelessWidget {
                     controller: passwordController,
                     decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.lock),
-                        hintText: 'Enter a password',
+                        hintText: 'Enter password',
                         border: OutlineInputBorder()),
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return 'Enter a valid password';
+                        return 'Enter correct password';
                       } else {
                         return null;
                       }
@@ -96,7 +96,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.black),
+                          backgroundColor: const Color.fromARGB(255, 143, 135, 135)),
                       onPressed: () {
                         Navigator.push(
                             context,
