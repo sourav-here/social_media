@@ -16,7 +16,7 @@ class UserService {
       final List<dynamic> jsonData = response.data;
       return jsonData.map((json) => UsersModel.fromJson(json)).toList();
     } else {
-      throw Exception('Unable to load data');
+      throw Exception('Error while fetching');
     }
   }
 
