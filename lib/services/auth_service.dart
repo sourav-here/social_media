@@ -93,7 +93,7 @@ class AuthService {
       if (response.statusCode == 200) {
         log('password changed');
       } else {
-        print('password change failed${response.statusCode}');
+        print('unable to change password${response.statusCode}');
       }
     } catch (e) {
       throw Exception(e);
