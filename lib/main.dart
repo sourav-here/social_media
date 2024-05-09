@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => UserProvider(),
-      child: MaterialApp(debugShowCheckedModeBanner: false, home: LoginPage()),
+      child: MaterialApp(debugShowCheckedModeBanner: false,
+      home: LoginPage()),
     );
   }
 }

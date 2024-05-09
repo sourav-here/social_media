@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:social_media/controller/provider.dart';
 import 'package:social_media/models/usersmodel.dart';
 import 'package:social_media/services/user_services.dart';
+import 'package:social_media/view/add_post.dart';
 import 'package:social_media/view/details_screen.dart';
 import 'package:social_media/view/profilepage.dart';
 
@@ -113,12 +114,26 @@ class UserList extends StatelessWidget {
               });
             }
           }),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const ProfilePage()));
-        },
-        child: const Icon(Icons.person),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ProfilePage()));
+            },
+            child: const Icon(Icons.person),
+          ),
+          const SizedBox(height: 20,),
+          FloatingActionButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const PostScreen()));
+            },
+            child: const Icon(Icons.add_a_photo_rounded),
+          )
+        ],
       ),
     );
   }

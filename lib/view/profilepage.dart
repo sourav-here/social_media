@@ -70,13 +70,21 @@ class ProfilePage extends StatelessWidget {
                       children: [
                         const SizedBox(height: 100),
                         SizedBox(
-                          height: 90,
+                          height: 100,
                           child: Center(
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(45),
-                              child: const CircleAvatar(
-                                minRadius: 90,
-                                backgroundColor: Colors.blueAccent,
+                              child: Container(
+                                width: 100,
+                                height: 100,
+                                color: Colors.white,
+                                child: const Center(
+                                  child: Icon(
+                                    Icons.person,
+                                    size: 100,
+                                    color: Color.fromARGB(255, 63, 63, 63),
+                                  ),
+                                ),
                               ),
                             ),
                           ),
