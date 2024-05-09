@@ -25,7 +25,7 @@ class PasswordChange extends StatelessWidget {
           TextFormField(
             controller: passwordController,
             decoration: const InputDecoration(
-                hintText: 'Enter new password', border: OutlineInputBorder()),
+                hintText:'Enter new password', border: OutlineInputBorder()),
           ),
           const Gap(30),
           ElevatedButton(
