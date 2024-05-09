@@ -37,8 +37,6 @@ dependencies:
   cupertino_icons: ^1.0.6
   dio: ^5.4.2+1
   shared_preferences: ^2.2.2
-  gap: ^3.0.1
-  http: ^1.2.1
   provider: ^6.1.2
 
 dev_dependencies:

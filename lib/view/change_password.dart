@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:social_media/services/auth_service.dart';
 
 class PasswordChange extends StatelessWidget {
@@ -27,7 +26,7 @@ class PasswordChange extends StatelessWidget {
             decoration: const InputDecoration(
                 hintText:'Enter new password', border: OutlineInputBorder()),
           ),
-          const Gap(30),
+          const SizedBox(height: 30,),
           ElevatedButton(
               onPressed: () async {
                 await AuthService()

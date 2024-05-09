@@ -1,7 +1,6 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:social_media/models/auth_model.dart';
 import 'package:social_media/services/auth_service.dart';
 import 'package:social_media/view/signup_page.dart';
@@ -36,7 +35,7 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Gap(20),
+                  const SizedBox(height: 20,),
                   TextFormField(
                     controller: emailController,
                     decoration: const InputDecoration(
@@ -51,7 +50,7 @@ class LoginPage extends StatelessWidget {
                       }
                     },
                   ),
-                  const Gap(20),
+                  const SizedBox(height: 20,),
                   TextFormField(
                     controller: passwordController,
                     decoration: const InputDecoration(
@@ -66,7 +65,7 @@ class LoginPage extends StatelessWidget {
                       }
                     },
                   ),
-                  const Gap(40),
+                  const SizedBox(height: 40,),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black),
